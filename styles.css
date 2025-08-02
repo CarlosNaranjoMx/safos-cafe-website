@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
     color: var(--color-cafe);
     overflow-x: hidden;
-    padding-top: 80px; /* Compensar altura del header fijo */
+    /* padding-top: 80px; Compensar altura del header fijo */
 }
 
 /* Header */
