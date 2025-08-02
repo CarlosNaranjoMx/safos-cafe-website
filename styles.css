@@ -20,6 +20,7 @@ body {
     line-height: 1.6;
     color: var(--color-cafe);
     overflow-x: hidden;
+    padding-top: 80px; /* Compensar altura del header fijo */
 }
 
 /* Header */
@@ -63,6 +64,16 @@ body {
 
 .nav-links a:hover {
     color: var(--color-dorado);
+}
+
+/* Menú hamburguesa para móviles */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-blanco);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -413,6 +424,22 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Menos padding en móvil */
+    }
+    
+    .header {
+        padding: 0.5rem 0; /* Header más compacto en móvil */
+    }
+    
+    .nav {
+        padding: 0 1rem; /* Menos padding lateral */
+    }
+    
+    .logo {
+        font-size: 1.5rem; /* Logo más pequeño en móvil */
+    }
+    
     .hero-content,
     .food-content,
     .promotion-content {
@@ -428,7 +455,26 @@ body {
         display: none;
     }
     
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .btn-primary {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+    
     .locations-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        min-height: 80vh; /* Menos altura en móvil */
+        padding-top: 2rem;
+    }
+    
+    .coffee-cup {
+        width: 250px;
+        height: 250px;
     }
 }
