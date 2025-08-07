@@ -345,13 +345,10 @@ body {
 .map-container {
     max-width: 1000px;
     margin: 2rem auto;
-    height: 300px;
-    background: var(--color-azul-claro);
+    background: var(--color-blanco);
     border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Promotion Section */
@@ -503,5 +500,9 @@ body {
     
     .hero-image img {
         max-width: 250px;
+    }
+    
+    .map-container iframe {
+        height: 300px; /* Altura más pequeña en móviles */
     }
 }
