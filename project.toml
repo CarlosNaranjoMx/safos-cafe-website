@@ -1,6 +1,0 @@
-[[build.buildpacks]]
-uri = "gcr.io/buildpacks/nodejs"
-
-[[build.env]]
-name = "NODE_ENV"
-value = "production"
