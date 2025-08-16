@@ -1,0 +1,47 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md"
+    ],
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }],
+    "headers": [{
+      "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "headers": [{
+        "key": "Access-Control-Allow-Origin",
+        "value": "*"
+      }]
+    }, {
+      "source": "**/*.@(jpg|jpeg|gif|png|ico|svg)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=7200"
+      }]
+    }, {
+      "source": "**/*.@(css|js)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=604800"
+      }]
+    }]
+  },
+  "apphosting": {
+    "source": {
+      "projectId": "safos-cafe"
+    },
+    "build": {
+      "commands": [
+        "npm install"
+      ]
+    },
+    "serve": {
+      "startCommand": "npm start"
+    }
+  }
+}
